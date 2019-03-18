@@ -1,0 +1,23 @@
+.hero {
+  background-color: $hero-bg-color;
+  color: $white;
+  padding: 22*$unit 4*$unit;
+  overflow: hidden;
+
+  &__title {
+    font-size: 14*$unit;
+    width: 150*$unit;
+    margin: $hero__title-margin-y auto;
+  }
+
+  &__call-to-action {
+    -webkit-appearance: none;
+    display: block;
+    margin: 0 auto;
+    padding: 3*$unit 7*$unit;
+    border-radius: 2*$unit;
+    font-size: 5*$unit;
+    font-weight: bold;
+    color: #7755FF;
+  }
+}

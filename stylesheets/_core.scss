@@ -1,0 +1,33 @@
+$unit: 4px;
+
+$hero-bg-color: #7755FF;
+$white: white;
+
+$hero__title-height: 200px;
+$hero__title-margin-y: 24*$unit;
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif; 
+  font-size: 4*$unit;
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  transition: transform 200ms;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.row {
+  display: flex;
+}

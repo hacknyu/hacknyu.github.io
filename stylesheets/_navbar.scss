@@ -1,0 +1,23 @@
+.navbar {
+  text-align: center;
+  line-height: 1;
+
+  &__inner {
+    @include clearfix;
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    float: left;
+  }
+
+  &__link {
+    padding: 3*$unit 5*$unit;
+    color: $white;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}

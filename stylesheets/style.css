@@ -21,29 +21,16 @@ body {
 button {
   font-family: inherit;
   font-size: inherit;
-  border: none; }
+  border: none;
+  transition: transform 200ms; }
+  button:hover {
+    cursor: pointer;
+    transform: scale(1.1); }
+  button:active {
+    transform: scale(0.9); }
 
 .row {
   display: flex; }
-
-.hero {
-  background-color: #7755FF;
-  color: white;
-  padding: 88px 16px;
-  overflow: hidden; }
-  .hero__title {
-    font-size: 56px;
-    width: 600px;
-    margin: 96px auto; }
-  .hero__call-to-action {
-    -webkit-appearance: none;
-    display: block;
-    margin: 0 auto;
-    padding: 12px 28px;
-    border-radius: 8px;
-    font-size: 20px;
-    font-weight: bold;
-    color: #7755FF; }
 
 .navbar {
   text-align: center;
@@ -64,6 +51,25 @@ button {
     color: white;
     text-transform: uppercase;
     letter-spacing: 0.05em; }
+
+.hero {
+  background-color: #7755FF;
+  color: white;
+  padding: 88px 16px;
+  overflow: hidden; }
+  .hero__title {
+    font-size: 56px;
+    width: 600px;
+    margin: 96px auto; }
+  .hero__call-to-action {
+    -webkit-appearance: none;
+    display: block;
+    margin: 0 auto;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #7755FF; }
 
 .cluster {
   position: relative;
@@ -100,7 +106,7 @@ button {
     transform: translate(0, -50%);
     transition: transform 400ms; }
     .cluster__star:hover {
-      transform: translate(0, -50%) scale(1.1); }
+      transform: translate(0, -50%) scale(1.2); }
     .cluster__star:nth-child(1) {
       animation: twinkle ease-in-out 8s infinite; }
     .cluster__star:nth-child(2) {
