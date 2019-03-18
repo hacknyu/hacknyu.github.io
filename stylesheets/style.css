@@ -33,7 +33,7 @@ button {
   overflow: hidden; }
   .hero__title {
     font-size: 56px;
-    width: 11em;
+    width: 600px;
     margin: 96px auto; }
   .hero__call-to-action {
     -webkit-appearance: none;
@@ -67,25 +67,40 @@ button {
 
 .cluster {
   position: relative;
+  width: 0;
+  height: 0;
   top: 196px; }
   .cluster--right {
-    right: 80px; }
+    right: 200px; }
     .cluster--right .cluster__star:nth-child(1) {
-      right: 40px;
+      right: -80px;
       top: -48px; }
     .cluster--right .cluster__star:nth-child(2) {
-      right: 192px;
+      right: 72px;
       top: 0px; }
     .cluster--right .cluster__star:nth-child(3) {
-      right: 128px;
+      right: 8px;
+      top: 96px; }
+  .cluster--left {
+    left: 200px;
+    transform-origin: center;
+    transform: rotate(-180deg); }
+    .cluster--left .cluster__star:nth-child(1) {
+      left: -80px;
+      top: -48px; }
+    .cluster--left .cluster__star:nth-child(2) {
+      left: 72px;
+      top: 0px; }
+    .cluster--left .cluster__star:nth-child(3) {
+      left: 8px;
       top: 96px; }
   .cluster__star {
     display: block;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
     transition: transform 400ms; }
     .cluster__star:hover {
-      transform: translate(-50%, -50%) scale(1.1); }
+      transform: translate(0, -50%) scale(1.1); }
     .cluster__star:nth-child(1) {
       animation: twinkle ease-in-out 8s infinite; }
     .cluster__star:nth-child(2) {

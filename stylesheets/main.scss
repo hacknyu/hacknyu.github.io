@@ -33,7 +33,7 @@ button {
 
   &__title {
     font-size: 14*$unit;
-    width: 11em;
+    width: 150*$unit;
     margin: $hero__title-margin-y auto;
   }
 
@@ -73,30 +73,48 @@ button {
   }
 }
 
+// rather messy
 .cluster {
   $component: &;
 
   position: relative;
+  width: 0;
+  height: 0;
   top: $hero__title-margin-y + ($hero__title-height / 2);
 
   &--right {
-    right: 20*$unit; 
+    right: 50*$unit; 
 
     #{$component}__star {
-      &:nth-child(1) { right: 10*$unit; top: -12*$unit; }
-      &:nth-child(2) { right: 48*$unit; top: 0*$unit;   }
-      &:nth-child(3) { right: 32*$unit; top: 24*$unit;  }
+      &:nth-child(1) { right: -20*$unit; top: -12*$unit; }
+      &:nth-child(2) { right: 18*$unit; top: 0*$unit;   }
+      &:nth-child(3) { right: 2*$unit; top: 24*$unit;  }
     }
   }
 
+  // flip the right cluster to make left cluster
+  // (origin of stars has to be normalized)
+  &--left {
+    left: 50*$unit;
+    transform-origin: center;
+    transform: rotate(-180deg);
+
+    #{$component}__star {
+      &:nth-child(1) { left: -20*$unit; top: -12*$unit; }
+      &:nth-child(2) { left: 18*$unit; top: 0*$unit;   }
+      &:nth-child(3) { left: 2*$unit; top: 24*$unit;  }
+    }
+  }
+
+  // shared star styles; twinkle animation and star sizes
   &__star {
     display: block;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(0, -50%);
     transition: transform 400ms;
 
     &:hover {
-      transform: translate(-50%, -50%) scale(1.1);
+      transform: translate(0, -50%) scale(1.1);
     }
     
     &:nth-child(1) { animation: twinkle ease-in-out 8s infinite; }
