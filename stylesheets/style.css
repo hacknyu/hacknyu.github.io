@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Space Grotesk"), url("/fonts/webfont/SpaceGrotesk-Regular.woff2") format("woff2"), url("/fonts/webfont/SpaceGrotesk-Regular.woff") format("woff"); }
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 600;
+  src: local("Space Grotesk SemiBold"), url("/fonts/webfont/SpaceGrotesk-SemiBold.woff2") format("woff2"), url("/fonts/webfont/SpaceGrotesk-SemiBold.woff") format("woff"); }
+@font-face {
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Space Grotesk Bold"), url("/fonts/webfont/SpaceGrotesk-Bold.woff2") format("woff2"), url("/fonts/webfont/SpaceGrotesk-Bold.woff") format("woff"); }
+body {
+  margin: 0;
+  font-family: "Space Grotesk"; }
+
+.hero {
+  background-color: #7755FF;
+  color: white;
+  padding: 56px; }
+  .hero__title {
+    font-size: 56px;
+    width: 11em;
+    margin: 2em auto; }
+
+.navbar {
+  text-align: center;
+  line-height: 1;
+  margin: 48px; }
+  .navbar__inner {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+    .navbar__inner:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .navbar__item {
+    float: left; }
+  .navbar__link {
+    padding: 12px 16px;
+    color: white;
+    text-transform: uppercase; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,48 @@
+@import "fonts";
+@import "utilities";
+
+$hero-bg-color: #7755FF;
+$white: white;
+
+$unit: 4px;
+
+body {
+  margin: 0;
+  font-family: "Space Grotesk"; 
+}
+
+.hero {
+  background-color: $hero-bg-color;
+  color: $white;
+  padding: 14 * $unit;
+
+  &__title {
+    font-size: 14 * $unit;
+    width: 11em;
+    margin: 2em auto;
+  }
+}
+
+.navbar {
+  text-align: center;
+  line-height: 1;
+  margin: 12 * $unit;
+
+  &__inner {
+    @include clearfix;
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__item {
+    float: left;
+  }
+
+  &__link {
+    padding: 3 * $unit 4 * $unit;
+    color: $white;
+    text-transform: uppercase;
+  }
+}
