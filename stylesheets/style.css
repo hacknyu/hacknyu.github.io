@@ -15,21 +15,39 @@
   src: local("Space Grotesk Bold"), url("/fonts/webfont/SpaceGrotesk-Bold.woff2") format("woff2"), url("/fonts/webfont/SpaceGrotesk-Bold.woff") format("woff"); }
 body {
   margin: 0;
-  font-family: "Space Grotesk"; }
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px; }
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none; }
+
+.row {
+  display: flex; }
 
 .hero {
   background-color: #7755FF;
   color: white;
-  padding: 56px; }
+  padding: 88px 16px;
+  overflow: hidden; }
   .hero__title {
     font-size: 56px;
     width: 11em;
-    margin: 2em auto; }
+    margin: 96px auto; }
+  .hero__call-to-action {
+    -webkit-appearance: none;
+    display: block;
+    margin: 0 auto;
+    padding: 12px 28px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #7755FF; }
 
 .navbar {
   text-align: center;
-  line-height: 1;
-  margin: 48px; }
+  line-height: 1; }
   .navbar__inner {
     display: inline-block;
     list-style: none;
@@ -42,8 +60,49 @@ body {
   .navbar__item {
     float: left; }
   .navbar__link {
-    padding: 12px 16px;
+    padding: 12px 20px;
     color: white;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    letter-spacing: 0.05em; }
+
+.cluster {
+  position: relative;
+  top: 196px; }
+  .cluster--right {
+    right: 80px; }
+    .cluster--right .cluster__star:nth-child(1) {
+      right: 40px;
+      top: -48px; }
+    .cluster--right .cluster__star:nth-child(2) {
+      right: 192px;
+      top: 0px; }
+    .cluster--right .cluster__star:nth-child(3) {
+      right: 128px;
+      top: 96px; }
+  .cluster__star {
+    display: block;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    transition: transform 400ms; }
+    .cluster__star:hover {
+      transform: translate(-50%, -50%) scale(1.1); }
+    .cluster__star:nth-child(1) {
+      animation: twinkle ease-in-out 8s infinite; }
+    .cluster__star:nth-child(2) {
+      animation: twinkle ease-in-out 4s infinite; }
+    .cluster__star:nth-child(3) {
+      animation: twinkle ease-in-out 3s infinite; }
+    .cluster__star--large {
+      width: 88px; }
+    .cluster__star--medium {
+      width: 56px; }
+    .cluster__star--small {
+      width: 40px; }
+
+@keyframes twinkle {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0.25; } }
 
 /*# sourceMappingURL=style.css.map */

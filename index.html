@@ -8,7 +8,8 @@
   <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
-  <header class="hero">
+  <header class="hero container">
+    
     <nav class="navbar">
       <ul class="navbar__inner">
         <li class="navbar__item"><a href="" class="navbar__link">Home</a></li>
@@ -17,7 +18,25 @@
         <li class="navbar__item"><a href="" class="navbar__link">Blog</a></li>
       </ul>
     </nav>
-    <h1 class="hero__title">HackNYU organizes events at NYU around building creative tech.</h1>
+
+    <div class="row">
+      <div class="cluster" aria-hidden="true"> 
+        <img src="/images/star-large.svg" class="cluster__star cluster__star--large">
+        <img src="/images/star-medium.svg" class="cluster__star cluster__star--medium">
+        <img src="/images/star-small.svg" class="cluster__star cluster__star--small">
+      </div>
+
+      <h1 class="hero__title">HackNYU organizes events at NYU around building creative tech.</h1>
+
+      <div class="cluster cluster--right" aria-hidden="true"> 
+        <img src="/images/star-large.svg" class="cluster__star cluster__star--large">
+        <img src="/images/star-medium.svg" class="cluster__star cluster__star--medium">
+        <img src="/images/star-small.svg" class="cluster__star cluster__star--small">
+      </div>
+    </div>
+
+    <button class="hero__call-to-action">Learn more!</button>
+
   </header>
 </body>
 </html>
