@@ -1,14 +1,15 @@
 // rather messy
-.cluster {
+.Cluster {
   $component: &;
 
   position: relative;
   width: 0;
   height: 0;
-  top: $hero__title-margin-y + ($hero__title-height / 2);
+  top: $Hero__title-margin-y + ($Hero__title-height / 2);
 
   &--right {
-    right: 50*$unit; 
+    right: 50*$unit;
+    // right: 80*$unit; 
 
     #{$component}__star {
       &:nth-child(1) { right: -20*$unit; top: -12*$unit; }
@@ -21,6 +22,7 @@
   // (origin of stars has to be normalized)
   &--left {
     left: 50*$unit;
+    // left: 80*$unit;
     transform-origin: center;
     transform: rotate(-180deg);
 
@@ -29,15 +31,22 @@
       &:nth-child(2) { left: 18*$unit; top: 0*$unit;   }
       &:nth-child(3) { left: 2*$unit; top: 24*$unit;  }
     }
+
+    @include breakpoint(720px) {
+      top: $Hero__title-margin-y + $Hero__title-height;
+    } 
+    @include breakpoint(560px) {
+      top: $Hero__title-margin-y + $Hero__title-height * 2;
+    } 
   }
 
   // shared star styles; twinkle animation and star sizes
   &__star {
     display: block;
     position: absolute;
-    transform: translate(0, -50%);
     transition: transform 400ms;
-
+    transform: translate(0, -50%);
+    
     &:hover {
       transform: translate(0, -50%) scale(1.2);
     }
@@ -49,6 +58,15 @@
     &--large  { width: 22*$unit; }
     &--medium { width: 14*$unit; }
     &--small  { width: 10*$unit; }
+
+    // &--large  { width: 18*$unit; }
+    // &--medium { width: 10*$unit; }
+    // &--small  { width: 6*$unit; }
+  }
+
+
+  @include breakpoint(1200px) {
+    opacity: 0.5;
   }
 }
 

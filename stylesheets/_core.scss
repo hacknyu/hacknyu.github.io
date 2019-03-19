@@ -1,22 +1,36 @@
 $unit: 4px;
-
-$hero-bg-color: #7755FF;
 $white: white;
+$clear: rgba(255, 255, 255, 0);
+$brand-purple: rgb(145, 117, 255);
 
-$hero__title-height: 200px;
-$hero__title-margin-y: 24*$unit;
+$Container-padding: 4*$unit;
+$Button-border-radius: 2*$unit;
+
+@mixin breakpoint($max) {
+   @media (max-width: $max) {
+       @content;
+   }
+}
 
 body {
   margin: 0;
   font-family: "Space Grotesk", sans-serif; 
-  font-size: 4*$unit;
+  font-size: 5*$unit;
 }
 
-button {
+.Button {
+  position: relative;
+  display: block;
+  margin: 2*$unit;
+  padding: 3*$unit 7*$unit;
+  border-radius: $Button-border-radius;
+  border: none;
   font-family: inherit;
   font-size: inherit;
-  border: none;
+  color: inherit;
   transition: transform 200ms;
+  -webkit-appearance: none;
+  z-index: 1;
 
   &:hover {
     cursor: pointer;
@@ -28,6 +42,19 @@ button {
   }
 }
 
-.row {
+.Row {
   display: flex;
+  &--x-center {
+    justify-content: center;
+  }
+}
+
+.Container {
+  padding: $Container-padding;
+  width: 90vw;
+  max-width: 180*$unit;
+}
+
+.AboutSection {
+  padding: 10*$unit 20*$unit;
 }

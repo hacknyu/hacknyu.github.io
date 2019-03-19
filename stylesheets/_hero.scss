@@ -1,23 +1,36 @@
-.hero {
-  background-color: $hero-bg-color;
+// $hero-bg-color: #7755FF;
+$Hero-bg-color: $brand-purple;
+$Hero__title-height: 200px;
+$Hero__title-margin-y: 22*$unit;
+// $hero__title-margin-y: 18*$unit;
+
+.Hero {
+  background-color: $Hero-bg-color;
   color: $white;
-  padding: 22*$unit 4*$unit;
+  padding: 28*$unit $Container-padding;
+  // padding: 24*$unit $container-padding;
   overflow: hidden;
 
   &__title {
-    font-size: 14*$unit;
-    width: 150*$unit;
-    margin: $hero__title-margin-y auto;
+    // font-size: 10*$unit;
+    // width: 105*$unit;
+    font-size: 16*$unit;
+    width: 170*$unit;
+    margin: $Hero__title-margin-y auto;
   }
 
-  &__call-to-action {
-    -webkit-appearance: none;
-    display: block;
-    margin: 0 auto;
-    padding: 3*$unit 7*$unit;
-    border-radius: 2*$unit;
+  &__Button {
     font-size: 5*$unit;
-    font-weight: bold;
-    color: #7755FF;
+    color: $Hero-bg-color;
+
+    &--call-to-action {
+
+    }
+
+    &--secondary {
+      background-color: $clear;
+      color: $white;
+      border: $unit/2 solid white;
+    }
   }
 }

@@ -4,39 +4,53 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>HackNYU Club</title>
-  <meta name="description" content="">
+  <meta name="description" content="HackNYU organizes events at NYU around building creative tech.">
   <link rel="stylesheet" href="stylesheets/style.css">
 </head>
 <body>
-  <header class="hero container">
+  <header class="Hero">
     
-    <nav class="navbar">
-      <ul class="navbar__inner">
-        <li class="navbar__item"><a href="" class="navbar__link">Home</a></li>
-        <li class="navbar__item"><a href="" class="navbar__link">About</a></li>
-        <li class="navbar__item"><a href="" class="navbar__link">Join</a></li>
-        <li class="navbar__item"><a href="" class="navbar__link">Blog</a></li>
+    <nav class="Navbar">
+      <ul class="Navbar__inner">
+        <li class="Navbar__item"><a href="" class="Navbar__link">Home</a></li>
+        <li class="Navbar__item"><a href="#about" class="Navbar__link">About</a></li>
+        <li class="Navbar__item"><a href="" class="Navbar__link">Blog</a></li>
+        <li class="Navbar__item"><a href="" class="Navbar__link">Join</a></li>
       </ul>
     </nav>
 
-    <div class="row">
-      <div class="cluster cluster--left" aria-hidden="true"> 
-        <img src="/images/star-large.svg" class="cluster__star cluster__star--large">
-        <img src="/images/star-medium.svg" class="cluster__star cluster__star--medium">
-        <img src="/images/star-small.svg" class="cluster__star cluster__star--small">
+    <div class="Row">
+      <div class="Cluster Cluster--left" aria-hidden="true"> 
+        <img src="/images/star-large.svg" class="Cluster__star Cluster__star--large">
+        <img src="/images/star-medium.svg" class="Cluster__star Cluster__star--medium">
+        <img src="/images/star-small.svg" class="Cluster__star Cluster__star--small">
       </div>
 
-      <h1 class="hero__title">HackNYU organizes events at NYU around building creative tech.</h1>
+      <h1 class="Hero__title">HackNYU organizes events at NYU around building creative tech.</h1>
 
-      <div class="cluster cluster--right" aria-hidden="true"> 
-        <img src="/images/star-large.svg" class="cluster__star cluster__star--large">
-        <img src="/images/star-medium.svg" class="cluster__star cluster__star--medium">
-        <img src="/images/star-small.svg" class="cluster__star cluster__star--small">
+      <div class="Cluster Cluster--right" aria-hidden="true"> 
+        <img src="/images/star-large.svg" class="Cluster__star Cluster__star--large">
+        <img src="/images/star-medium.svg" class="Cluster__star Cluster__star--medium">
+        <img src="/images/star-small.svg" class="Cluster__star Cluster__star--small">
       </div>
     </div>
 
-    <button class="hero__call-to-action">Learn more</button>
-
+    <div class="Row Row--x-center">
+      <button class="Button Hero__Button Hero__Button--call-to-action">Learn more</button>
+      <button class="Button Hero__Button Hero__Button--secondary">Join our mailing list</button>
+    <div>
   </header>
+
+  <main class="Container">
+    <section id="about" class="AboutSection">
+      <h2>About</h2>
+      <p>
+        HackNYU puts together events to help grow a positive maker and hacker community at NYU and other nearby schools. We are an official NYU student run organization, and work with sponsors and the university to bring you our events free of charge.
+      </p>
+      <p>
+        Our largest event (which shares our name), HackNYU, brings together over 500 students for 48 hours every year to create projects that address pertinent global issues.
+      </p>
+    </section>
+  </main>
 </body>
 </html>
