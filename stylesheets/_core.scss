@@ -4,6 +4,10 @@ body {
   font-size: 5*$unit;
 }
 
+h1, h2, h3 {
+  margin-top: 0;
+}
+
 .ImageContainer { 
   &__Image {
     box-sizing: border-box;
@@ -15,30 +19,50 @@ body {
 }
 
 .Container {
-  padding: $Container-padding;
   width: 90vw;
-  max-width: 180*$unit;
+  max-width: 250*$unit;
 }
 
-.AboutSection {
+.Section {
   @extend .Row; //  :-/
   @extend .Row--y-center;
-  padding: 10*$unit 20*$unit;
+  @extend .Container;
+  margin: 12*$unit auto;
+  // margin: 12*$unit 20*$unit;
 
   @include breakpoint(200*$unit) {
     flex-direction: column;
-    padding: 0;
+    margin: 0;
+    padding: $Container-padding;
   }
 
   &__content {
-    padding: 4*$unit 10*$unit;
-  }
+    margin-right: 10*$unit;
+    max-width: 150*$unit;
+    flex: 1;
+  } 
 
-  &__ImageContainer {
+  & &__ImageContainer {
+    flex: 1;
+
     @include breakpoint(200*$unit) {
       width: 90vw;
-      max-width: 120*$unit;
+      max-width: 180*$unit;
       height: auto;
     }
+
+      // is this a good idea?!?
+    & .ImageContainer__Image {
+      box-shadow: 5px 5px 20px lightgrey;
+    }
   }
+}
+
+.Event {
+  @extend .is-rounded;
+
+  padding: 4*$unit;
+  // border: $unit/2 solid lightgrey;
+  float: left;
+  margin-right: 4*$unit;
 }

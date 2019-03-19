@@ -13,20 +13,23 @@
   font-style: normal;
   font-weight: 700;
   src: local("Space Grotesk Bold"), url("/fonts/webfont/SpaceGrotesk-Bold.woff2") format("woff2"), url("/fonts/webfont/SpaceGrotesk-Bold.woff") format("woff"); }
-.Row, .AboutSection {
+.Row, .Section {
   display: flex; }
   .Row--x-center {
     justify-content: center; }
-  .Row--y-center, .AboutSection {
+  .Row--y-center, .Section {
     align-items: center; }
 
-.is-rounded {
+.is-rounded, .Event {
   border-radius: 8px; }
 
 body {
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
   font-size: 20px; }
+
+h1, h2, h3 {
+  margin-top: 0; }
 
 .ImageContainer__Image {
   box-sizing: border-box;
@@ -35,24 +38,35 @@ body {
   width: 100%;
   height: auto; }
 
-.Container {
-  padding: 16px;
+.Container, .Section {
   width: 90vw;
-  max-width: 720px; }
+  max-width: 1000px; }
 
-.AboutSection {
-  padding: 40px 80px; }
+.Section {
+  margin: 48px auto; }
   @media (max-width: 800px) {
-    .AboutSection {
+    .Section {
       flex-direction: column;
-      padding: 0; } }
-  .AboutSection__content {
-    padding: 16px 40px; }
-  @media (max-width: 800px) {
-    .AboutSection__ImageContainer {
-      width: 90vw;
-      max-width: 480px;
-      height: auto; } }
+      margin: 0;
+      padding: 16px; } }
+  .Section__content {
+    margin-right: 40px;
+    max-width: 600px;
+    flex: 1; }
+  .Section .Section__ImageContainer {
+    flex: 1; }
+    @media (max-width: 800px) {
+      .Section .Section__ImageContainer {
+        width: 90vw;
+        max-width: 720px;
+        height: auto; } }
+    .Section .Section__ImageContainer .ImageContainer__Image {
+      box-shadow: 5px 5px 20px lightgrey; }
+
+.Event {
+  padding: 16px;
+  float: left;
+  margin-right: 16px; }
 
 .Button {
   position: relative;
@@ -111,12 +125,16 @@ body {
 .Hero {
   background-color: #9175ff;
   color: white;
-  padding: 112px 16px;
-  overflow: hidden; }
+  padding: 128px 16px;
+  padding-top: 64px;
+  overflow: hidden;
+  margin-bottom: 60px; }
   .Hero__title {
     font-size: 64px;
     width: 680px;
-    margin: 88px auto; }
+    margin: 0 auto;
+    margin-top: 128px;
+    margin-bottom: 96px; }
   .Hero .Hero__Button--call-to-action {
     color: #9175ff;
     background-color: white; }
@@ -129,7 +147,7 @@ body {
   position: relative;
   width: 0;
   height: 0;
-  top: 188px; }
+  top: 228px; }
   .Cluster--right {
     right: 200px; }
     .Cluster--right .Cluster__star:nth-child(1) {
@@ -156,10 +174,10 @@ body {
       top: 96px; }
     @media (max-width: 720px) {
       .Cluster--left {
-        top: 288px; } }
+        top: 328px; } }
     @media (max-width: 560px) {
       .Cluster--left {
-        top: 488px; } }
+        top: 528px; } }
   .Cluster__star {
     display: block;
     position: absolute;

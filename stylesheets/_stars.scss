@@ -5,7 +5,7 @@
   position: relative;
   width: 0;
   height: 0;
-  top: $Hero__title-margin-y + ($Hero__title-height / 2);
+  top: $Hero__title-margin-top + ($Hero__title-height / 2);
 
   &--right {
     right: 50*$unit;
@@ -33,10 +33,10 @@
     }
 
     @include breakpoint(720px) {
-      top: $Hero__title-margin-y + $Hero__title-height;
+      top: $Hero__title-margin-top + $Hero__title-height;
     } 
     @include breakpoint(560px) {
-      top: $Hero__title-margin-y + $Hero__title-height * 2;
+      top: $Hero__title-margin-top + $Hero__title-height * 2;
     } 
   }
 
