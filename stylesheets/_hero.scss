@@ -19,12 +19,12 @@ $Hero__title-margin-y: 22*$unit;
     margin: $Hero__title-margin-y auto;
   }
 
-  &__Button {
-    font-size: 5*$unit;
-    color: $Hero-bg-color;
-
+  // probably too tightly coupled; move to Button modifiers
+  // http://simurai.com/blog/2015/05/11/nesting-components
+  & &__Button {
     &--call-to-action {
-
+      color: $Hero-bg-color;
+      background-color: $white;
     }
 
     &--secondary {

@@ -1,7 +1,41 @@
+$unit: 4px;
+$white: white;
+$clear: rgba(255, 255, 255, 0);
+$brand-purple: rgb(145, 117, 255);
+
+$Container-padding: 4*$unit;
+$border-radius: 2*$unit;
+
+
 @mixin clearfix {
   &:after {
     content: "";
     display: table;
     clear: both;
+  }
+}
+
+.Row {
+  display: flex;
+
+  &--x-center {
+    justify-content: center;
+  }
+
+  &--y-center {
+    align-items: center;
+  }
+}
+
+
+@mixin breakpoint($max) {
+   @media (max-width: $max) {
+       @content;
+   }
+}
+
+.is {
+  &-rounded {
+    border-radius: $border-radius;
   }
 }

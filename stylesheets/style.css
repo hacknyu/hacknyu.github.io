@@ -13,10 +13,46 @@
   font-style: normal;
   font-weight: 700;
   src: local("Space Grotesk Bold"), url("/fonts/webfont/SpaceGrotesk-Bold.woff2") format("woff2"), url("/fonts/webfont/SpaceGrotesk-Bold.woff") format("woff"); }
+.Row, .AboutSection {
+  display: flex; }
+  .Row--x-center {
+    justify-content: center; }
+  .Row--y-center, .AboutSection {
+    align-items: center; }
+
+.is-rounded {
+  border-radius: 8px; }
+
 body {
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
   font-size: 20px; }
+
+.ImageContainer__Image {
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  width: 100%;
+  height: auto; }
+
+.Container {
+  padding: 16px;
+  width: 90vw;
+  max-width: 720px; }
+
+.AboutSection {
+  padding: 40px 80px; }
+  @media (max-width: 800px) {
+    .AboutSection {
+      flex-direction: column;
+      padding: 0; } }
+  .AboutSection__content {
+    padding: 16px 40px; }
+  @media (max-width: 800px) {
+    .AboutSection__ImageContainer {
+      width: 90vw;
+      max-width: 480px;
+      height: auto; } }
 
 .Button {
   position: relative;
@@ -36,19 +72,13 @@ body {
     transform: scale(1.1); }
   .Button:active {
     transform: scale(0.9); }
-
-.Row {
-  display: flex; }
-  .Row--x-center {
-    justify-content: center; }
-
-.Container {
-  padding: 16px;
-  width: 90vw;
-  max-width: 720px; }
-
-.AboutSection {
-  padding: 40px 80px; }
+  .Button--call-to-action {
+    color: #9175ff;
+    background-color: white; }
+  .Button--secondary {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: 2px solid white; }
 
 .Navbar {
   font-size: 16px;
@@ -87,13 +117,13 @@ body {
     font-size: 64px;
     width: 680px;
     margin: 88px auto; }
-  .Hero__Button {
-    font-size: 20px;
-    color: #9175ff; }
-    .Hero__Button--secondary {
-      background-color: rgba(255, 255, 255, 0);
-      color: white;
-      border: 2px solid white; }
+  .Hero .Hero__Button--call-to-action {
+    color: #9175ff;
+    background-color: white; }
+  .Hero .Hero__Button--secondary {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    border: 2px solid white; }
 
 .Cluster {
   position: relative;
