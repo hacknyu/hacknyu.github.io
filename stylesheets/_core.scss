@@ -1,11 +1,20 @@
 body {
   margin: 0;
   font-family: "Space Grotesk", sans-serif; 
-  font-size: 5*$unit;
+  font-size: 22px;
+  line-height: 1.45;
 }
+
+main {
+  overflow: hidden;
+  padding-top: 3*$unit;
+}
+
+$text-max-width: 125*$unit;
 
 h1, h2, h3 {
   margin-top: 0;
+  line-height: 1.25;
 }
 
 .ImageContainer { 
@@ -18,9 +27,47 @@ h1, h2, h3 {
   }
 }
 
+.Image {
+  width: 50vw;
+
+  @include breakpoint(200*$unit) {
+    width: 90vw;
+  }
+}
+
 .Container {
   width: 90vw;
   max-width: 250*$unit;
+}
+
+.AboutSection {
+  max-width: $text-max-width;
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+  padding: 10*$unit;
+  margin-bottom: 10*$unit;
+
+  // don't build abstractions too early!!
+  &__img-right {
+    position: absolute;
+    top: 2*$unit;
+    right: -32vw;
+    width: 26vw;
+    transform: rotate(5deg);
+  }
+
+  &__img-left { 
+    position: absolute;
+    top: 58*$unit;
+    left: -36vw;
+    width: 26vw;
+    transform: rotate(-8deg);
+  }
+
+  img {
+    max-width: 100*$unit;
+  }
 }
 
 .Section {
@@ -28,7 +75,6 @@ h1, h2, h3 {
   @extend .Row--y-center;
   @extend .Container;
   margin: 12*$unit auto;
-  line-height: 1.45;
   // margin: 12*$unit 20*$unit;
 
   @include breakpoint(200*$unit) {
@@ -39,23 +85,10 @@ h1, h2, h3 {
 
   &__content {
     margin-right: 20*$unit;
-    max-width: 150*$unit;
+    // max-width: 150*$unit;
+    // 125*$unit;
+    max-width: $text-max-width;
     flex: 1;
-  } 
-
-  & &__ImageContainer {
-    flex: 1;
-
-    @include breakpoint(200*$unit) {
-      width: 90vw;
-      max-width: 180*$unit;
-      height: auto;
-    }
-
-      // is this a good idea?!?
-    & .ImageContainer__Image {
-      box-shadow: 5px 5px 20px lightgrey;
-    }
   }
 }
 

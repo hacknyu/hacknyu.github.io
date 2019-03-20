@@ -35,8 +35,20 @@ $border-radius: 2*$unit;
    }
 }
 
+@mixin breakpoint-min($min) {
+   @media (min-width: $min) {
+       @content;
+   }
+}
+
 .is {
   &-rounded {
     border-radius: $border-radius;
+  }
+}
+
+.has {
+  &-shadow {
+    box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.2);
   }
 }

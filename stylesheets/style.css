@@ -23,13 +23,22 @@
 .is-rounded, .Event {
   border-radius: 8px; }
 
+.has-shadow {
+  box-shadow: 2px 6px 20px rgba(0, 0, 0, 0.2); }
+
 body {
   margin: 0;
   font-family: "Space Grotesk", sans-serif;
-  font-size: 20px; }
+  font-size: 22px;
+  line-height: 1.45; }
+
+main {
+  overflow: hidden;
+  padding-top: 12px; }
 
 h1, h2, h3 {
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 1.25; }
 
 .ImageContainer__Image {
   box-sizing: border-box;
@@ -38,13 +47,40 @@ h1, h2, h3 {
   width: 100%;
   height: auto; }
 
+.Image {
+  width: 50vw; }
+  @media (max-width: 800px) {
+    .Image {
+      width: 90vw; } }
+
 .Container, .Section {
   width: 90vw;
   max-width: 1000px; }
 
+.AboutSection {
+  max-width: 500px;
+  width: 90vw;
+  margin: 0 auto;
+  position: relative;
+  padding: 40px;
+  margin-bottom: 40px; }
+  .AboutSection__img-right {
+    position: absolute;
+    top: 8px;
+    right: -32vw;
+    width: 26vw;
+    transform: rotate(5deg); }
+  .AboutSection__img-left {
+    position: absolute;
+    top: 232px;
+    left: -36vw;
+    width: 26vw;
+    transform: rotate(-8deg); }
+  .AboutSection img {
+    max-width: 400px; }
+
 .Section {
-  margin: 48px auto;
-  line-height: 1.45; }
+  margin: 48px auto; }
   @media (max-width: 800px) {
     .Section {
       flex-direction: column;
@@ -52,17 +88,8 @@ h1, h2, h3 {
       padding: 16px; } }
   .Section__content {
     margin-right: 80px;
-    max-width: 600px;
+    max-width: 500px;
     flex: 1; }
-  .Section .Section__ImageContainer {
-    flex: 1; }
-    @media (max-width: 800px) {
-      .Section .Section__ImageContainer {
-        width: 90vw;
-        max-width: 720px;
-        height: auto; } }
-    .Section .Section__ImageContainer .ImageContainer__Image {
-      box-shadow: 5px 5px 20px lightgrey; }
 
 .Event {
   padding: 16px;
@@ -129,7 +156,7 @@ h1, h2, h3 {
   padding: 128px 16px;
   padding-top: 64px;
   overflow: hidden;
-  margin-bottom: 60px; }
+  margin-bottom: 80px; }
   .Hero__title {
     font-size: 64px;
     width: 680px;
