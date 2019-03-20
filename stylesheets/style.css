@@ -43,14 +43,15 @@ h1, h2, h3 {
   max-width: 1000px; }
 
 .Section {
-  margin: 48px auto; }
+  margin: 48px auto;
+  line-height: 1.45; }
   @media (max-width: 800px) {
     .Section {
       flex-direction: column;
       margin: 0;
       padding: 16px; } }
   .Section__content {
-    margin-right: 40px;
+    margin-right: 80px;
     max-width: 600px;
     flex: 1; }
   .Section .Section__ImageContainer {

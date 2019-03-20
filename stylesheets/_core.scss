@@ -28,6 +28,7 @@ h1, h2, h3 {
   @extend .Row--y-center;
   @extend .Container;
   margin: 12*$unit auto;
+  line-height: 1.45;
   // margin: 12*$unit 20*$unit;
 
   @include breakpoint(200*$unit) {
@@ -37,7 +38,7 @@ h1, h2, h3 {
   }
 
   &__content {
-    margin-right: 10*$unit;
+    margin-right: 20*$unit;
     max-width: 150*$unit;
     flex: 1;
   } 
