@@ -34,7 +34,7 @@ body {
 
 main {
   overflow: hidden;
-  padding-top: 12px; }
+  padding-top: 80px; }
 
 h1, h2, h3 {
   margin-top: 0;
@@ -69,13 +69,19 @@ h1, h2, h3 {
     top: 8px;
     right: -32vw;
     width: 26vw;
-    transform: rotate(5deg); }
+    transform: rotate(5deg);
+    transition: transform 400ms; }
+    .AboutSection__img-right:hover {
+      transform: rotate(3deg) scale(1.15); }
   .AboutSection__img-left {
     position: absolute;
     top: 232px;
     left: -36vw;
     width: 26vw;
-    transform: rotate(-8deg); }
+    transform: rotate(-8deg);
+    transition: transform 400ms; }
+    .AboutSection__img-left:hover {
+      transform: rotate(-6deg) scale(1.15); }
   .AboutSection img {
     max-width: 400px; }
 
@@ -155,8 +161,7 @@ h1, h2, h3 {
   color: white;
   padding: 128px 16px;
   padding-top: 64px;
-  overflow: hidden;
-  margin-bottom: 80px; }
+  overflow: hidden; }
   .Hero__title {
     font-size: 64px;
     width: 680px;

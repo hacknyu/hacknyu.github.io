@@ -7,7 +7,7 @@ body {
 
 main {
   overflow: hidden;
-  padding-top: 3*$unit;
+  padding-top: 20*$unit;
 }
 
 $text-max-width: 125*$unit;
@@ -55,6 +55,11 @@ h1, h2, h3 {
     right: -32vw;
     width: 26vw;
     transform: rotate(5deg);
+    transition: transform 400ms;
+
+    &:hover {
+      transform: rotate(3deg) scale(1.15);
+    }
   }
 
   &__img-left { 
@@ -63,6 +68,11 @@ h1, h2, h3 {
     left: -36vw;
     width: 26vw;
     transform: rotate(-8deg);
+    transition: transform 400ms;
+
+    &:hover {
+      transform: rotate(-6deg) scale(1.15);
+    }
   }
 
   img {
