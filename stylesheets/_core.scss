@@ -93,6 +93,7 @@ p {
 .Section {
   @extend .Container;
   margin: 12*$unit auto;
+  margin-bottom: 20*$unit;
   // margin: 12*$unit 20*$unit;
 
   @include breakpoint(200*$unit) {
@@ -118,8 +119,9 @@ p {
   // $width: 100%;
   
   $teams-per-row: 3;
-  $team-width: percentage(1/$teams-per-row); // relative to .Teams
-  $team-padding: 3%;
+  // $team-width: percentage(1/$teams-per-row); // relative to .Teams
+  $team-width: percentage(1/$teams-per-row) - 2%; // relative to .Teams
+  $team-padding: 4%;
   $gaps: ($teams-per-row - 1);
   $team-margin-right: (100% - ($team-width * $teams-per-row)) / $gaps; // relative to .Teams
 
@@ -132,19 +134,23 @@ p {
   // margin-left: -$team-padding - ($extra / 2);
   // margin-left: -5%;
   margin-left: -$team-padding;
+  // @extend .is-rounded;
+  // border: 2px solid lightgrey;
+  // background-color: $brand-purple;
+  // color: $white;
 
   &__team {
-    @extend .is-rounded;
+    // @extend .is-rounded;
     font-size: 4.5*$unit;
 
     box-sizing: border-box; // otherwise border + padding will cause wrapping
-    // border: $unit/2 solid lightgrey;
+    border: $unit/2 dashed $grey;
     flex-basis: $team-width;
     // since width is relative to container, and $team-padding is relative to it's container...
     // rescale: to make relative to .Teams's container
     padding: percentage($team-padding / $width);
     margin-right: $team-margin-right;
-    // margin-bottom: $team-margin-right; 
+    margin-bottom: $team-margin-right; 
     // float: left;
 
     &:nth-child(#{$teams-per-row}n) {

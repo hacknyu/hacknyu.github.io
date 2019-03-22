@@ -20,7 +20,7 @@
   .Row--y-center {
     align-items: center; }
 
-.is-rounded, .Teams__team, .Event {
+.is-rounded, .Event {
   border-radius: 8px; }
 
 .has-shadow {
@@ -92,7 +92,8 @@ p {
     max-width: 400px; }
 
 .Section {
-  margin: 48px auto; }
+  margin: 48px auto;
+  margin-bottom: 80px; }
   @media (max-width: 800px) {
     .Section {
       flex-direction: column;
@@ -106,7 +107,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   margin-top: 40px;
-  margin-left: -3%; }
+  margin-left: -4%; }
   .Teams:after {
     content: "";
     display: table;
@@ -114,9 +115,11 @@ p {
   .Teams__team {
     font-size: 18px;
     box-sizing: border-box;
-    flex-basis: 33.3333333333%;
-    padding: 2.7272727273%;
-    margin-right: 0%; }
+    border: 2px dashed lightgrey;
+    flex-basis: 31.3333333333%;
+    padding: 3.6363636364%;
+    margin-right: 3%;
+    margin-bottom: 3%; }
     .Teams__team:nth-child(3n) {
       margin-right: 0; }
 
