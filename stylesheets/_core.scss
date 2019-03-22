@@ -3,6 +3,8 @@ body {
   font-family: "Space Grotesk", sans-serif; 
   font-size: 22px;
   line-height: 1.45;
+  // background-color: #f5f2ff;
+  // color: #10004c;
 }
 
 main {
@@ -15,6 +17,10 @@ $text-max-width: 125*$unit;
 h1, h2, h3 {
   margin-top: 0;
   line-height: 1.25;
+}
+
+p {
+  margin-top: 0;
 }
 
 .ImageContainer { 
@@ -37,7 +43,7 @@ h1, h2, h3 {
 
 .Container {
   width: 90vw;
-  max-width: 250*$unit;
+  max-width: 225*$unit;
 }
 
 .AboutSection {
@@ -46,7 +52,11 @@ h1, h2, h3 {
   margin: 0 auto;
   position: relative;
   padding: 10*$unit;
-  margin-bottom: 10*$unit;
+  margin-bottom: 16*$unit;
+
+  @include breakpoint(3*$unit) {
+    padding: 0;
+  }
 
   // don't build abstractions too early!!
   &__img-right {
@@ -81,8 +91,6 @@ h1, h2, h3 {
 }
 
 .Section {
-  @extend .Row; //  :-/
-  @extend .Row--y-center;
   @extend .Container;
   margin: 12*$unit auto;
   // margin: 12*$unit 20*$unit;
@@ -94,13 +102,91 @@ h1, h2, h3 {
   }
 
   &__content {
-    margin-right: 20*$unit;
-    // max-width: 150*$unit;
+    max-width: 150*$unit;
+    // max-width: 225*$unit;
     // 125*$unit;
-    max-width: $text-max-width;
-    flex: 1;
+    // max-width: $text-max-width;
+    // margin: 0 auto;
+    // flex: 1;
   }
 }
+
+.Teams {
+  // this is a huge mess
+  // $extra: 10%;
+  $width: 110%; // relative to .Teams's container
+  // $width: 100%;
+  
+  $teams-per-row: 3;
+  $team-width: percentage(1/$teams-per-row); // relative to .Teams
+  $team-padding: 3%;
+  $gaps: ($teams-per-row - 1);
+  $team-margin-right: (100% - ($team-width * $teams-per-row)) / $gaps; // relative to .Teams
+
+  @include clearfix();
+  width: $width;
+  display: flex;
+  flex-wrap: wrap;
+  // make text flush
+  margin-top: 10*$unit;
+  // margin-left: -$team-padding - ($extra / 2);
+  // margin-left: -5%;
+  margin-left: -$team-padding;
+
+  &__team {
+    @extend .is-rounded;
+    font-size: 4.5*$unit;
+
+    box-sizing: border-box; // otherwise border + padding will cause wrapping
+    // border: $unit/2 solid lightgrey;
+    flex-basis: $team-width;
+    // since width is relative to container, and $team-padding is relative to it's container...
+    // rescale: to make relative to .Teams's container
+    padding: percentage($team-padding / $width);
+    margin-right: $team-margin-right;
+    // margin-bottom: $team-margin-right; 
+    // float: left;
+
+    &:nth-child(#{$teams-per-row}n) {
+      margin-right: 0;
+    }
+  }
+}
+
+// .Teams {
+//   $width: 110%; // relative to .Teams's container
+//   // $width: 100%;
+//   $team-width: 47%; // relative to .Teams
+//   $team-padding: 5%;
+//   $teams-per-row: 2;
+//   $gaps: ($teams-per-row - 1);
+//   $team-margin-right: (100% - ($team-width * $teams-per-row)) / $gaps; // relative to .Teams
+
+//   @include clearfix();
+//   width: $width;
+//   // make text flush
+//   margin-top: 10*$unit;
+//   margin-left: -$team-padding;
+//   // margin-left: -5%;
+
+//   &__team {
+//     @extend .is-rounded;
+
+//     box-sizing: border-box; // otherwise border + padding will cause wrapping
+//     // border: $unit/2 solid lightgrey;
+//     width: $team-width;
+//     // since width is relative to container, and $team-padding is relative to it's container...
+//     // rescale: to make relative to .Teams's container
+//     padding: percentage($team-padding / $width);
+//     margin-right: $team-margin-right;
+//     // margin-bottom: $team-margin-right; 
+//     float: left;
+
+//     &:nth-child(#{$teams-per-row}n) {
+//       margin-right: 0;
+//     }
+//   }
+// }
 
 .Event {
   @extend .is-rounded;
